@@ -1,0 +1,10 @@
+function dx=rhs(t,x,u)
+dx = zeros(3,1);
+w0 = 2.36;
+ksi = 0.03;
+k = -4.3434;
+K = 529.798;
+H = 0.0022;
+dx(1)=x(2);
+dx(2)=-w0^2*sin(x(1))-2*ksi*w0*x(2)-k*H*x(3)+k*u;
+dx(3)=K*(u-H*x(3));
