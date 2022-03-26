@@ -27,3 +27,7 @@ plot(t,x(:,2))
 plot(t,uk)
 legend('kąt1','prędkość wahadła 1','sterowanie')
 hold off
+
+%% Display animation
+dT = t(end)/length(t);
+animate_pendelum(x,dT);
