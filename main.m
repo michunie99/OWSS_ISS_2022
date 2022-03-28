@@ -20,7 +20,7 @@ hold on
 % plot([t;t2+1],[x(:,1);x2(:,1)])
 % plot([t;t2+1],[x(:,2);x2(:,2)])
 % plot([t;t2+1],[0.1*x(:,3);0.1*x2(:,3)])
-% plot([t;t2+1],[uk;uk2])
+% plot([t;t2+1],[uk;uk2])uk
 plot(t,x(:,1))
 plot(t,x(:,2))
 %plot(t,0.1*x(:,3))
