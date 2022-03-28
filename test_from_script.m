@@ -1,16 +1,6 @@
-% clear;close all;tauopt=[0.1 0.20 0.40]';u=1.0*[1;-1;1];
-% x0=[0;0;0];xf=[pi;0;0];
-% 
-% 
-% %W=1000*eye(3);
-% ro = 1000; % współczynnik kary
-% w1 = 1; % współczynnik kąta wahadła
-% w2 = 1; % współczynnik prędkości wahadła
-% w3 = 0; % współczynnik kąta silnika
-% W = ro*diag([w1,w2,w3]);
-
-clear;close all;tauopt=[0.2 1 2]';u=1.0*[1;-1;1];
+clear;close all;tauopt=[0.1 0.20 0.40]';u=3.0*[1;-1;1];
 x0=[0;0;0];xf=[pi;0;0];
+
 
 %W=1000*eye(3);
 ro = 1000; % współczynnik kary
@@ -19,8 +9,18 @@ w2 = 1; % współczynnik prędkości wahadła
 w3 = 0; % współczynnik kąta silnika
 W = ro*diag([w1,w2,w3]);
 
+% clear;close all;tauopt=[0.2 1 2]';u=1.0*[1;-1;1];
+% x0=[0;0;0];xf=[pi;0;0];
+% 
+% %W=1000*eye(3);
+% ro = 1000; % współczynnik kary
+% w1 = 1; % współczynnik kąta wahadła
+% w2 = 1; % współczynnik prędkości wahadła
+% w3 = 0; % współczynnik kąta silnika
+% W = ro*diag([w1,w2,w3]);
 
-MDNS=300;
+
+MDNS=100;
 qh=@(tauopt) cost_fun(tauopt,u,x0,xf,W,MDNS);
 nb=length(tauopt);b=0.0*ones(nb,1);A=-eye(nb);
 
