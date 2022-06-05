@@ -1,6 +1,6 @@
 function dx=rhs_s(t,x,u)
 dx = zeros(3,1);
-tau = 0.1;
+tau = 0.2;
 ro = 10;
 k = 2;
 

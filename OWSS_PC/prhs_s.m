@@ -1,6 +1,6 @@
 function dp = prhs_s(t, x, u, p)
 dp=zeros(3,1);
-tau = 0.1;
+tau = 0.2;
 k = 2;
 
 dp(1)= 0;
